@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import ListItem from './ListItem';
+import ListItem from '../ListItem/ListItem';
 
+import { Item } from '../ListItem/ListItem';
 
 const List = () => {
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useState<Item[]>([]);
 
     const handleAddItem = () => {
-        const newItem = {
+        const newItem : Item = {
             id: items.length,
             title: `Заголовок ${items.length + 1}`,
             text: `Текст ${items.length + 1}`
@@ -14,7 +15,7 @@ const List = () => {
         setItems([...items, newItem]);
     };
 
-    const handleDeleteItem = (id) => {
+    const handleDeleteItem = (id: number) => {
         const updatedItems = items.filter(item => item.id !== id);
         setItems(updatedItems);
     };

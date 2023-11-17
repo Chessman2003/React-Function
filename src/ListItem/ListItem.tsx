@@ -1,6 +1,17 @@
 import React from 'react';
 
-const ListItem = ({ item, onDelete }) => {
+export type Item = {
+  id: number,
+  title: string,
+  text: string
+}
+
+type Props = {
+  item: Item,
+  onDelete: (id: number) => void
+}
+
+const ListItem = ({ item, onDelete }: Props) => {
     return (
       <div>
         <h2>{item.title}</h2>

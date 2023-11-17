@@ -32,7 +32,7 @@ module.exports = {
     },
 
     resolve: {
-        extentions: ['.js', '.jsx']
+        extensions: ['.js', '.jsx']
     },
 
     module: {
@@ -41,7 +41,7 @@ module.exports = {
             {
                 test: /\.(s[ac]|c)ss$/i,
                 use: [
-                  MiniCssExtractPlugin.loader,
+                  MiniCssExtractplugin.loader,
                   'css-loader',
                   'postcss-loader',
                   'sass-loader',
